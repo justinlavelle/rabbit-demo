@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  consoleapponetests:
+    image: ${DOCKER_REGISTRY-}consoleapponetests
+    build:
+      context: .
+      dockerfile: ConsoleAppOneTests/Dockerfile
+
+  consoleappone:
+    image: ${DOCKER_REGISTRY-}consoleappone
+    build:
+      context: .
+      dockerfile: ConsoleAppOne/Dockerfile
+
